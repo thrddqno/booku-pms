@@ -1,3 +1,17 @@
 spring:
   application:
     name: booku-pms
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/booku
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+server:
+  address: 0.0.0.0
+  port: 8585 #pansamantagal
+springdotenv:
+  directory: ../
