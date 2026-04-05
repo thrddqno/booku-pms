@@ -1,0 +1,16 @@
+name: booku-pms
+services:
+  booku-db:
+    image: postgres:latest
+    container_name: booku-db
+    environment: 
+      POSTGRES_USER: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: booku
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/
+
+volumes:
+  db-data: {}
